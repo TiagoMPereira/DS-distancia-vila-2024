@@ -1,0 +1,222 @@
+[
+    {
+        "team": "Fluminense FC",
+        "stadium": "Est\u00e1dio Jornalista M\u00e1rio Filho",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/2462.png?lm=1648225934"
+    },
+    {
+        "team": "CR Flamengo",
+        "stadium": "Est\u00e1dio Jornalista M\u00e1rio Filho",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/614.png?lm=1551023331"
+    },
+    {
+        "team": "S\u00e3o Paulo FC",
+        "stadium": "Est\u00e1dio C\u00edcero Pompeu de Toledo",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/585.png?lm=1409133922"
+    },
+    {
+        "team": "Cruzeiro EC",
+        "stadium": "Est\u00e1dio Governador Magalh\u00e3es Pinto",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/609.png?lm=1641150262"
+    },
+    {
+        "team": "Gr\u00eamio FBPA",
+        "stadium": "Arena do Gr\u00eamio",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/210.png?lm=1412879265"
+    },
+    {
+        "team": "Fortaleza EC",
+        "stadium": "Est\u00e1dio Governador Pl\u00e1cido Castelo",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/10870.png?lm=1631541450"
+    },
+    {
+        "team": "SC Internacional",
+        "stadium": "Est\u00e1dio Beira-Rio",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/6600.png?lm=1644878605"
+    },
+    {
+        "team": "SC Corinthians",
+        "stadium": "Neo Qu\u00edmica Arena ",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/199.png?lm=1649430398"
+    },
+    {
+        "team": "EC Bahia",
+        "stadium": "Arena Fonte Nova",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/10010.png?lm=1412879423"
+    },
+    {
+        "team": "Botafogo FR",
+        "stadium": "Est\u00e1dio Ol\u00edmpico Nilton Santos",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/537.png?lm=1651494898"
+    },
+    {
+        "team": "Atl\u00e9tico Mineiro",
+        "stadium": "Arena MRV",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/330.png?lm=1411033853"
+    },
+    {
+        "team": "SE Palmeiras",
+        "stadium": "Allianz Parque",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/1023.png?lm=1411204983"
+    },
+    {
+        "team": "Cuiab\u00e1 EC",
+        "stadium": "Arena Pantanal",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/28022.png?lm=1451243370"
+    },
+    {
+        "team": "Athletico Paranaense",
+        "stadium": "Ligga Arena",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/679.png?lm=1548711363"
+    },
+    {
+        "team": "Coritiba FC",
+        "stadium": "Est\u00e1dio Major Ant\u00f4nio Couto Pereira",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/776.png?lm=1412879464"
+    },
+    {
+        "team": "Am\u00e9rica Mineiro",
+        "stadium": "Est\u00e1dio Raimundo Sampaio",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/2863.png?lm=1646322335"
+    },
+    {
+        "team": "CR Vasco da Gama",
+        "stadium": "Est\u00e1dio S\u00e3o Janu\u00e1rio",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/978.png?lm=1651168164"
+    },
+    {
+        "team": "Santos FC",
+        "stadium": "Est\u00e1dio Urbano Caldeira",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/221.png?lm=1412879099"
+    },
+    {
+        "team": "RB Bragantino",
+        "stadium": "Est\u00e1dio Nabi Abi Chedid",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/8793.png?lm=1577915313"
+    },
+    {
+        "team": "Goi\u00e1s EC",
+        "stadium": "Est\u00e1dio de Hail\u00e9 Pinheiro",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/3197.png?lm=1668099048"
+    },
+    {
+        "team": "Cear\u00e1 SC",
+        "stadium": "Est\u00e1dio Governador Pl\u00e1cido Castelo",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/2029.png?lm=1437429449"
+    },
+    {
+        "team": "Sampaio Corr\u00eaa FC",
+        "stadium": "Est\u00e1dio Governador Jo\u00e3o Castelo - Castel\u00e3o",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/3319.png?lm=1670079461"
+    },
+    {
+        "team": "Londrina EC",
+        "stadium": "Est\u00e1dio Municipal Jacy Scaff",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/1693.png?lm=1434312269"
+    },
+    {
+        "team": "Sport Recife",
+        "stadium": "Est\u00e1dio Adelmar da Costa Carvalho",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/8718.png?lm=1412879537"
+    },
+    {
+        "team": "Guarani FC",
+        "stadium": "Est\u00e1dio Brinco de Ouro da Princesa",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/1755.png?lm=1450819625"
+    },
+    {
+        "team": "EC Vit\u00f3ria",
+        "stadium": "Est\u00e1dio Manoel Barradas",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/2125.png?lm=1412879373"
+    },
+    {
+        "team": "Botafogo FC",
+        "stadium": "Est\u00e1dio Santa Cruz",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/9030.png?lm=1423676900"
+    },
+    {
+        "team": "EC Juventude",
+        "stadium": "Est\u00e1dio Alfredo Jaconi ",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/10492.png?lm=1416046262"
+    },
+    {
+        "team": "Chapecoense",
+        "stadium": "Arena Cond\u00e1",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/17776.png?lm=1677130387"
+    },
+    {
+        "team": "CRB",
+        "stadium": "Est\u00e1dio Rei Pel\u00e9",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/11449.png?lm=1419705980"
+    },
+    {
+        "team": "AA Ponte Preta",
+        "stadium": "Est\u00e1dio Mois\u00e9s Lucarelli",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/1134.png?lm=1419949200"
+    },
+    {
+        "team": "Crici\u00fama EC",
+        "stadium": "Est\u00e1dio Heriberto H\u00fclse",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/7178.png?lm=1412878993"
+    },
+    {
+        "team": "ABC FC",
+        "stadium": "Est\u00e1dio Maria Lamas Farache",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/7209.png?lm=1438032109"
+    },
+    {
+        "team": "Gr\u00eamio Novorizontino",
+        "stadium": "Est\u00e1dio Jorge Ismael de Biasi",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/37474.png?lm=1420383136"
+    },
+    {
+        "team": "Ava\u00ed FC",
+        "stadium": "Est\u00e1dio Aderbal Ramos da Silva",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/2035.png?lm=1419949249"
+    },
+    {
+        "team": "Ituano FC",
+        "stadium": "Est\u00e1dio Municipal Doutor Novelli J\u00fanior",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/4773.png?lm=1455315107"
+    },
+    {
+        "team": "Mirassol FC",
+        "stadium": "Est\u00e1dio Municipal Jos\u00e9 Mar\u00eda de Campos Maia",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/3876.png?lm=1585083395"
+    },
+    {
+        "team": "Atl\u00e9tico Goianiense",
+        "stadium": "Est\u00e1dio Antonio Accioly",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/15172.png?lm=1598605472"
+    },
+    {
+        "team": "Vila Nova FC",
+        "stadium": "Est\u00e1dio On\u00e9sio Brasileiro Alvarenga",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/5677.png?lm=1683557145"
+    },
+    {
+        "team": "Tombense FC",
+        "stadium": "Est\u00e1dio Ant\u00f4nio Guimar\u00e3es de Almeida",
+        "img": "https://tmssl.akamaized.net/images/wappen/verysmall/3234.png?lm=1619352176"
+    },
+    {
+        "team": "Brusque FC",
+        "stadium": "Estadio Augusto Bauer",
+        "img": "https://tmssl.akamaized.net/images/wappen/homepage/14390.png?lm=1579096150"
+    },
+    {
+        "team": "Amazonas FC",
+        "stadium": "Arena da Amaz\u00f4nia",
+        "img": "https://tmssl.akamaized.net/images/wappen/homepage/87727.png?lm=1612517939"
+    },
+    {
+        "team": "Oper\u00e1rio FEC",
+        "stadium": "Estadio Germano Kruger",
+        "img": "https://tmssl.akamaized.net/images/wappen/tiny/27214.png?lm=1647255730"
+    },
+    {
+        "team": "Paysandu SC",
+        "stadium": "Est\u00e1dio Banpar\u00e1 Curuzu",
+        "img": "https://tmssl.akamaized.net/images/wappen/tiny/6347.png?lm=1596631029"
+    }
+]
