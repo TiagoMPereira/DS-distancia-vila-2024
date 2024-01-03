@@ -1,0 +1,41 @@
+team,stadium,img,lat,long,country,state,city,coordinates,vila_distance,scenario_1,scenario_2,scenario_3
+Fluminense FC,Estádio Jornalista Mário Filho,Fluminense,-22.9121619,-43.2311861,Brazil,RJ,Rio de Janeiro,"(-22.9121619, -43.2311861)",337.7869485949187,A,A,A
+CR Flamengo,Estádio Jornalista Mário Filho,Flamengo,-22.9121619,-43.2311861,Brazil,RJ,Rio de Janeiro,"(-22.9121619, -43.2311861)",337.7869485949187,A,A,A
+São Paulo FC,Estádio Cícero Pompeu de Toledo,São Paulo,-23.6000584,-46.7201583,Brazil,SP,São Paulo,"(-23.6000584, -46.7201583)",54.9652657666274,A,A,A
+Cruzeiro EC,Estádio Governador Magalhães Pinto,Cruzeiro,-19.8659115,-43.9710434,Brazil,MG,Belo Horizonte,"(-19.8659115, -43.9710434)",514.2469968965198,A,A,A
+Grêmio FBPA,Arena do Grêmio,Grêmio,-29.9740429,-51.1951073,Brazil,RS,Porto Alegre,"(-29.9740429, -51.1951073)",823.0637562289604,A,A,A
+Fortaleza EC,Estádio Governador Plácido Castelo,Fortaleza,-3.806742,-38.5216794,Brazil,CE,Fortaleza,"(-3.806742, -38.5216794)",2381.889567896169,A,A,A
+SC Internacional,Estádio Beira-Rio,Internacional,-30.065504685798903,-51.23585549512045,Brazil,RS,Porto Alegre,"(-30.065504685798903, -51.23585549512045)",833.5324031743367,A,A,A
+SC Corinthians,Neo Química Arena ,Corinthians,-23.5452934,-46.4742864,Brazil,SP,São Paulo,"(-23.5452934, -46.4742864)",47.01547502887883,A,A,A
+EC Bahia,Arena Fonte Nova,Bahia,-12.978865418421202,-38.50436328295125,Brazil,BA,Salvador,"(-12.978865418421202, -38.50436328295125)",1468.6437529082525,A,A,B
+Botafogo FR,Estádio Olímpico Nilton Santos,Botafogo,-22.893194,-43.2935691,Brazil,RJ,Rio de Janeiro,"(-22.893194, -43.2935691)",332.55548563473724,A,A,A
+Atlético Mineiro,Arena MRV,Atlético-MG,-19.9300116,-44.0138813,Brazil,MG,Belo Horizonte,"(-19.9300116, -44.0138813)",505.8761934178123,A,A,A
+SE Palmeiras,Allianz Parque,Palmeiras,-23.5274971,-46.6785281,Brazil,SP,São Paulo,"(-23.5274971, -46.6785281)",58.30645826455235,A,A,A
+Cuiabá EC,Arena Pantanal,Cuiabá,-15.6040649,-56.1222989,Brazil,MT,Cuiabá,"(-15.6040649, -56.1222989)",1379.1567073765827,A,A,A
+Athletico Paranaense,Ligga Arena,Athletico,-25.4482902,-49.276938,Brazil,PR,Curitiba,"(-25.4482902, -49.276938)",340.4117629754675,A,A,A
+Coritiba FC,Estádio Major Antônio Couto Pereira,Coritiba,-25.4214376,-49.2597567,Brazil,PR,Curitiba,"(-25.4214376, -49.2597567)",337.4770663491164,B,B,B
+América Mineiro,Estádio Raimundo Sampaio,América-MG,-19.9083526,-43.917778,Brazil,MG,Belo Horizonte,"(-19.9083526, -43.917778)",512.7625711278272,B,B,B
+CR Vasco da Gama,Estádio São Januário,Vasco,-22.8908007,-43.2282681,Brazil,RJ,Rio de Janeiro,"(-22.8908007, -43.2282681)",338.90345212339,A,B,A
+Santos FC,Estádio Urbano Caldeira,Santos,-23.9511157,-46.3389913,Brazil,SP,Santos,"(-23.9511157, -46.3389913)",0.0,B,A,A
+RB Bragantino,Estádio Nabi Abi Chedid,RB Bragantino,-22.9653902,-46.5368855,Brazil,SP,Bragança Paulista,"(-22.9653902, -46.5368855)",111.02615684006427,A,A,A
+Goiás EC,Estádio de Hailé Pinheiro,Goiás,-16.710161214144666,-49.261256018365415,Brazil,GO,Goiânia,"(-16.710161214144666, -49.261256018365415)",857.6588681682587,B,B,B
+Ceará SC,Estádio Governador Plácido Castelo,Ceará,-3.806742,-38.5216794,Brazil,CE,Fortaleza,"(-3.806742, -38.5216794)",2381.889567896169,B,B,B
+Sport Recife,Estádio Adelmar da Costa Carvalho,Sport,-8.0630099,-34.9036005,Brazil,PE,Recife,"(-8.0630099, -34.9036005)",2139.424332974233,B,B,B
+Guarani FC,Estádio Brinco de Ouro da Princesa,Guarani,-22.9095729,-47.0433697,Brazil,SP,Campinas,"(-22.9095729, -47.0433697)",135.96787747815998,B,B,B
+EC Vitória,Estádio Manoel Barradas,Vitória,-12.9190959,-38.4271321,Brazil,BA,Salvador,"(-12.9190959, -38.4271321)",1478.7629404907966,A,A,A
+Botafogo FC,Estádio Santa Cruz,Botafogo-SP,-21.2023921,-47.7901413,Brazil,SP,Ribeirão Preto,"(-21.2023921, -47.7901413)",338.9943618458045,B,B,B
+EC Juventude,Estádio Alfredo Jaconi ,Juventude,-29.1623639,-51.1767753,Brazil,RS,Caxias do Sul,"(-29.1623639, -51.1767753)",751.955494707909,A,A,A
+Chapecoense,Arena Condá,Chapecoense,-27.1040926,-52.6069818,Brazil,SC,Chapecó,"(-27.1040926, -52.6069818)",720.2036165707327,B,B,B
+CRB,Estádio Rei Pelé,CRB,-9.6709074,-35.7596546,Brazil,AL,Maceió,"(-9.6709074, -35.7596546)",1939.2494938328443,B,B,B
+AA Ponte Preta,Estádio Moisés Lucarelli,Ponte Preta,-22.9135401,-47.0511882,Brazil,SP,Campinas,"(-22.9135401, -47.0511882)",136.02061720335448,B,B,B
+Criciúma EC,Estádio Heriberto Hülse,Criciúma,-28.6842897,-49.367697,Brazil,SC,Criciúma,"(-28.6842897, -49.367697)",605.2726078560858,A,A,A
+Grêmio Novorizontino,Estádio Jorge Ismael de Biasi,Novorizontino,-21.46715639666488,-49.232497864259656,Brazil,SP,Novo Horizonte,"(-21.46715639666488, -49.232497864259656)",404.991357474958,B,B,B
+Avaí FC,Estádio Aderbal Ramos da Silva,Avaí,-27.6663917,-48.5316667,Brazil,SC,Florianópolis,"(-27.6663917, -48.5316667)",466.6156542496964,B,B,B
+Ituano FC,Estádio Municipal Doutor Novelli Júnior,Ituano,-23.2812738,-47.2879709,Brazil,SP,Itu,"(-23.2812738, -47.2879709)",121.99324352969114,B,B,B
+Mirassol FC,Estádio Municipal José María de Campos Maia,Mirassol,-20.82104422972856,-49.50675372326037,Brazil,SP,Mirassol,"(-20.82104422972856, -49.50675372326037)",475.9336119927195,B,B,B
+Atlético Goianiense,Estádio Antonio Accioly,Atlético-GO,-16.6695309,-49.2841376,Brazil,GO,Goiânia,"(-16.6695309, -49.2841376)",862.7235668615209,A,A,A
+Vila Nova FC,Estádio Onésio Brasileiro Alvarenga,Vila Nova,-16.6737028,-49.2376216,Brazil,GO,Goiânia,"(-16.6737028, -49.2376216)",860.5732098924908,B,B,B
+Brusque FC,Estadio Augusto Bauer,Brusque,-27.1013696,-48.91608,Brazil,SC,Brusque,"(-27.1013696, -48.91608)",434.5837449305493,B,B,B
+Amazonas FC,Arena da Amazônia,Amazonas FC,-3.0831132,-60.0280052,Brazil,AM,Manaus,"(-3.0831132, -60.0280052)",2738.3003047749166,B,B,B
+Operário FEC,Estadio Germano Kruger,Operário-PR,-25.116011132619025,-50.15654526042742,Brazil,PR,Ponta Grossa,"(-25.116011132619025, -50.15654526042742)",407.7551804128825,B,B,B
+Paysandu SC,Estádio Banpará Curuzu,Paysandu,-1.443778488242549,-48.46286997625053,Brazil,PA,Belém,"(-1.443778488242549, -48.46286997625053)",2500.733597097928,B,B,B
