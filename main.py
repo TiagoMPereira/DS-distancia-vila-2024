@@ -69,17 +69,22 @@ def run(df: pd.DataFrame):
 
     st.subheader('Comparação entre cenários 🆚')
 
-    summary = total_scenarios(df)
-    st.plotly_chart(summary)
+    col_plot, col_selecao = st.columns([2, 1])
+    stat = col_selecao.selectbox('Selecione a estatística:', ['Total', 'Média', 'Máxima', 'Mínima', 'Mediana', 'Desvio Padrão'])
+    summary = total_scenarios(df, stat)
+    col_plot.plotly_chart(summary)
 
+    expander_bp = st.expander("Visualizar detalhes (Boxplot)")
     boxplots = boxplot_scenarios(df)
-    st.plotly_chart(boxplots)
+    expander_bp.plotly_chart(boxplots)
+
+    st.divider()
 
     expander = st.expander("Informações")
     expander.markdown("##### Cálculo das distâncias")
     expander.markdown("##### Fontes")
 
-def total_scenarios(data: pd.DataFrame):
+def plot_states_region(data: pd.DataFrame, local: str):
     _c1 = set_df_scenario(data, "1")
     _c1 = _c1.loc[_c1['team'] != "Santos FC"]
     _c2 = set_df_scenario(data, "2")
@@ -87,11 +92,55 @@ def total_scenarios(data: pd.DataFrame):
     _c3 = set_df_scenario(data, "3")
     _c3 = _c3.loc[_c3['team'] != "Santos FC"]
 
-    labels = ["Distância total", "Distância média"]
+    if local == "Estados":
+        labels = ["Contagem de estados"]
+        c1_dist = [round(_c1['vila_distance'].mean(), 4)]
+        c2_dist = [round(_c2['vila_distance'].mean(), 4)]
+        c3_dist = [round(_c3['vila_distance'].mean(), 4)]
 
-    c1_dist = [round(_c1['vila_distance'].sum(), 4), round(_c1['vila_distance'].mean(), 4)]
-    c2_dist = [round(_c2['vila_distance'].sum(), 4), round(_c2['vila_distance'].mean(), 4)]
-    c3_dist = [round(_c3['vila_distance'].sum(), 4), round(_c3['vila_distance'].mean(), 4)]
+def total_scenarios(data: pd.DataFrame, stat: str):
+    _c1 = set_df_scenario(data, "1")
+    _c1 = _c1.loc[_c1['team'] != "Santos FC"]
+    _c2 = set_df_scenario(data, "2")
+    _c2 = _c2.loc[_c2['team'] != "Santos FC"]
+    _c3 = set_df_scenario(data, "3")
+    _c3 = _c3.loc[_c3['team'] != "Santos FC"]
+
+    if stat == "Média":
+        labels = ["Distância média"]
+        c1_dist = [round(_c1['vila_distance'].mean(), 4)]
+        c2_dist = [round(_c2['vila_distance'].mean(), 4)]
+        c3_dist = [round(_c3['vila_distance'].mean(), 4)]
+    
+    elif stat == "Mediana":
+        labels = ["Distância mediana"]
+        c1_dist = [round(_c1['vila_distance'].median(), 4)]
+        c2_dist = [round(_c2['vila_distance'].median(), 4)]
+        c3_dist = [round(_c3['vila_distance'].median(), 4)]
+    
+    elif stat == "Máxima":
+        labels = ["Distância máxima"]
+        c1_dist = [round(_c1['vila_distance'].max(), 4)]
+        c2_dist = [round(_c2['vila_distance'].max(), 4)]
+        c3_dist = [round(_c3['vila_distance'].max(), 4)]
+    
+    elif stat == "Mínima":
+        labels = ["Distância mínima"]
+        c1_dist = [round(_c1['vila_distance'].min(), 4)]
+        c2_dist = [round(_c2['vila_distance'].min(), 4)]
+        c3_dist = [round(_c3['vila_distance'].min(), 4)]
+    
+    elif stat == "Desvio Padrão":
+        labels = ["Desvio padrão da distância"]
+        c1_dist = [round(_c1['vila_distance'].std(), 4)]
+        c2_dist = [round(_c2['vila_distance'].std(), 4)]
+        c3_dist = [round(_c3['vila_distance'].std(), 4)]
+
+    else:
+        labels = ["Distância total"]
+        c1_dist = [round(_c1['vila_distance'].sum(), 4)]
+        c2_dist = [round(_c2['vila_distance'].sum(), 4)]
+        c3_dist = [round(_c3['vila_distance'].sum(), 4)]
 
     fig = go.Figure()
 
@@ -121,7 +170,7 @@ def total_scenarios(data: pd.DataFrame):
     fig.update_layout(
         barmode='group',  # Agrupar barras lado a lado
         height=400,
-        width=800,
+        width=600,
         showlegend=True,
         legend=dict(title='Cenários'),
         yaxis=dict(title='Distância em km'),
@@ -149,7 +198,7 @@ def boxplot_scenarios(data: pd.DataFrame):
     # Atualizar layout
     fig.update_layout(
         height=400,
-        width=800,
+        width=600,
         showlegend=True,
         legend=dict(title='Legendas'),
         xaxis=dict(title='Cenários'),
