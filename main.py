@@ -40,6 +40,8 @@ def get_coordinates(df: pd.DataFrame) -> dict:
 
 def run(df: pd.DataFrame):
 
+    st.set_page_config(page_title="Distância Vila", page_icon="🏟️")
+
     st.title('Distância da Vila Belmiro 🏟️')
 
     selected_tab = st.sidebar.selectbox("Selecione um cenário:", SCENARIOS.values())
@@ -78,13 +80,30 @@ def run(df: pd.DataFrame):
     boxplots = boxplot_scenarios(df)
     expander_bp.plotly_chart(boxplots)
 
+    regioes = plot_region(df)
+    st.plotly_chart(regioes)
+    estados = plot_states(df)
+    st.plotly_chart(estados)
+
     st.divider()
 
     expander = st.expander("Informações")
     expander.markdown("##### Cálculo das distâncias")
+    expander.markdown(
+        f"As distâncias foram calculadas pelo serviço GeoPy baseando-se nas "
+        "coordenadas dos estádios. O cálculo é feito considerando a distância "
+        "em um plano em três dimensões ([geodésica](https://doc.arcgis.com/pt-br/arcgis-online/analyze/geodesic-versus-planar-distance.htm#:~:text=A%20dist%C3%A2ncia%20geod%C3%A9sica%20%C3%A9%20calculada,da%20superf%C3%ADcie%20curva%20do%20mundo.)), "
+        "como a superfície esférica da Terra. "
+    )
     expander.markdown("##### Fontes")
+    expander.markdown(
+        f"- Estádios: https://www.transfermarkt.com.br/\n"
+        f"- Localizações: https://api.opencagedata.com/geocode/v1/ (acesso via API). As localizações foram validadas manualmente\n"
+        f"- Imagens: https://www.sofascore.com/\n"
+        f"- Cálculo das distâncias: https://geopy.readthedocs.io/en/stable/\n"
+    )
 
-def plot_states_region(data: pd.DataFrame, local: str):
+def plot_states(data: pd.DataFrame):
     _c1 = set_df_scenario(data, "1")
     _c1 = _c1.loc[_c1['team'] != "Santos FC"]
     _c2 = set_df_scenario(data, "2")
@@ -92,11 +111,108 @@ def plot_states_region(data: pd.DataFrame, local: str):
     _c3 = set_df_scenario(data, "3")
     _c3 = _c3.loc[_c3['team'] != "Santos FC"]
 
-    if local == "Estados":
-        labels = ["Contagem de estados"]
-        c1_dist = [round(_c1['vila_distance'].mean(), 4)]
-        c2_dist = [round(_c2['vila_distance'].mean(), 4)]
-        c3_dist = [round(_c3['vila_distance'].mean(), 4)]
+    _c1_st = dict(_c1['state'].value_counts())
+    _c2_st = dict(_c2['state'].value_counts())
+    _c3_st = dict(_c3['state'].value_counts())
+
+    _aux_df = pd.DataFrame([_c1_st, _c2_st, _c3_st]).fillna(0).T
+    _aux_df.columns = ["Santos rebaixado", "Vasco rebaixado", "Bahia rebaixado"]
+    _d1 = dict(_aux_df['Santos rebaixado'])
+    _d2 = dict(_aux_df['Vasco rebaixado'])
+    _d3 = dict(_aux_df['Bahia rebaixado'])
+
+    fig = go.Figure()
+
+    fig.add_trace(go.Bar(
+        x=list(_d1.keys()),
+        y=list(_d1.values()),
+        name='Santos rebaixado',
+        marker_color='rgb(220, 220, 220)',
+        hovertemplate='%{y}'
+    ))
+    fig.add_trace(go.Bar(
+        x=list(_d2.keys()),
+        y=list(_d2.values()),
+        name='Vasco rebaixado',
+        marker_color='rgb(150, 150, 150)',
+        hovertemplate='%{y}'
+    ))
+    fig.add_trace(go.Bar(
+        x=list(_d3.keys()),
+        y=list(_d3.values()),
+        name='Bahia rebaixado',
+        marker_color='rgb(70, 70, 70)',
+        hovertemplate='%{y}'
+    ))
+
+    # Atualizar layout
+    fig.update_layout(
+        barmode='group',  # Agrupar barras lado a lado
+        height=400,
+        width=800,
+        showlegend=True,
+        legend=dict(title='Cenários'),
+        yaxis=dict(title='Adversários por estado'),
+        title="Quantidade de adversários do Santos por estado em cada cenário"
+    )
+    
+    return fig
+
+
+def plot_region(data: pd.DataFrame):
+    _c1 = set_df_scenario(data, "1")
+    _c1 = _c1.loc[_c1['team'] != "Santos FC"]
+    _c2 = set_df_scenario(data, "2")
+    _c2 = _c2.loc[_c2['team'] != "Santos FC"]
+    _c3 = set_df_scenario(data, "3")
+    _c3 = _c3.loc[_c3['team'] != "Santos FC"]
+
+    _c1_st = dict(_c1['region'].value_counts())
+    _c2_st = dict(_c2['region'].value_counts())
+    _c3_st = dict(_c3['region'].value_counts())
+
+    _aux_df = pd.DataFrame([_c1_st, _c2_st, _c3_st]).fillna(0).T
+    _aux_df.columns = ["Santos rebaixado", "Vasco rebaixado", "Bahia rebaixado"]
+    _d1 = dict(_aux_df['Santos rebaixado'])
+    _d2 = dict(_aux_df['Vasco rebaixado'])
+    _d3 = dict(_aux_df['Bahia rebaixado'])
+
+    fig = go.Figure()
+
+    fig.add_trace(go.Bar(
+        x=list(_d1.keys()),
+        y=list(_d1.values()),
+        name='Santos rebaixado',
+        marker_color='rgb(220, 220, 220)',
+        hovertemplate='%{y}'
+    ))
+    fig.add_trace(go.Bar(
+        x=list(_d2.keys()),
+        y=list(_d2.values()),
+        name='Vasco rebaixado',
+        marker_color='rgb(150, 150, 150)',
+        hovertemplate='%{y}'
+    ))
+    fig.add_trace(go.Bar(
+        x=list(_d3.keys()),
+        y=list(_d3.values()),
+        name='Bahia rebaixado',
+        marker_color='rgb(70, 70, 70)',
+        hovertemplate='%{y}'
+    ))
+
+    # Atualizar layout
+    fig.update_layout(
+        barmode='group',  # Agrupar barras lado a lado
+        height=400,
+        width=800,
+        showlegend=True,
+        legend=dict(title='Cenários'),
+        yaxis=dict(title='Adversários por região'),
+        title="Quantidade de adversários do Santos por região em cada cenário"
+    )
+    
+    return fig
 
 def total_scenarios(data: pd.DataFrame, stat: str):
     _c1 = set_df_scenario(data, "1")
