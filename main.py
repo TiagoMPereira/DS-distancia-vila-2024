@@ -44,7 +44,11 @@ def run(df: pd.DataFrame):
 
     st.title('Distância da Vila Belmiro 🏟️')
 
-    selected_tab = st.sidebar.selectbox("Selecione um cenário:", SCENARIOS.values())
+    st.markdown(
+        "As distâncias são referentes à Vila Belmiro e aos estádios visitantes. Saiba mais na seção 'Informações' no fim da página."
+    )
+
+    selected_tab = st.sidebar.selectbox("Selecione um cenário", SCENARIOS.values())
     selected_scenario = [k for k, v in SCENARIOS.items() if v == selected_tab][0]
     df_scenario = set_df_scenario(df, selected_scenario)
 
@@ -87,10 +91,51 @@ def run(df: pd.DataFrame):
 
     st.divider()
 
+    st.markdown(
+        "Com o rebaixamento para a segunda divisão do Campeonato "
+        "Brasileiro de Futebol Masculino o Santos passa a enfrentar mais "
+        "adversários do estado de São Paulo (6) do que caso estivesse permanecido "
+        "na Série A (4). Entretanto, quando analisamos outros estados da região "
+        "Sudeste, há uma queda no número de adversários, visto que, em Minas Gerais, "
+        "o clube deixa de enfrentar Atlético Mineiro e Cruzeiro, e confronta apenas "
+        "o América. Já no Rio de Janeiro, na Série B o Santos não possui nenhum "
+        "clube adversário, caso permanecesse na primeira divisão enfrentaria 4 adversários "
+        "em caso de queda do Bahia, ou 3 caso o Vasco da Gama fosse rebaixado.\n\n"
+        "Conduzindo a análise para a região Sul, o Santos deixa de enfrentar 3 adversários "
+        "no Rio Grande do Sul, que representa o estado mais distante de São Paulo dentro "
+        "da região. O número de adversários em Santa Catarina aumenta em 2 enquanto "
+        "no Paraná, estado mais próximo, aumenta 1.\n\n"
+        "No Centro-Oeste do país, o Peixe deixa de enfrentar o Cuiabá, do Mato Grosso e "
+        "passa a enfrentar um adversário a mais em Goiás. Em comparação as distâncias "
+        "passam a ser menores com o Santos na B.\n\n"
+        "No Nordeste os adversários da Série B ficam mais distantes, o mais distante da região "
+        "é o Ceará (Santos na B) ou Fortaleza (Santos na A), contudo, atualmente o Santos "
+        "viaja para Pernambuco e Alagoas, além do Ceará, enquanto na Série A viajaria para "
+        "o Ceará e Bahia (2 vezes caso o Vasco fosse rebaixado ou 1 vez caso o Bahia caísse) "
+        "isso aumenta a distância total.\n\n"
+        "A região que mais afeta a distância percorrida na Série B é a Norte, caso o peixe permanecesse "
+        "na Série A, não teria nenhum adversário na região mais distante, entretanto, com a queda "
+        "passa a viajar para o Pará (Paysandu) e para o Amazonas (Amazonas), assim aumentando "
+        "a distância percorrida ao longo da temporada.\n\n"
+        "Com o rebaixamento do Santos, a mediana das distâncias entre estádios "
+        "diminui, por enfrentar mais adversários dos estados de São Paulo, "
+        "Paraná e Santa Catarina, entretanto, ao enfrentar os adversários do Norte "
+        "(Amazonas e Paysandu) a distribuição das distâncias acaba aumentando."
+    )
+
+
+    st.divider()
+
     expander = st.expander("Informações")
+    expander.markdown("##### Distâncias")
+    expander.markdown(
+        "As distâncias calculadas são entre a Vila Belmiro e os estádios adversários. "
+        "Não foram considerados os percursos entre os estádios bem como estradas e distâncias entre "
+        "aeroportos, caso necessário. Foi considerada apenas a distância geodésica entre os pontos."
+    )
     expander.markdown("##### Cálculo das distâncias")
     expander.markdown(
-        f"As distâncias foram calculadas pelo serviço GeoPy baseando-se nas "
+        "As distâncias foram calculadas pelo serviço GeoPy baseando-se nas "
         "coordenadas dos estádios. O cálculo é feito considerando a distância "
         "em um plano em três dimensões ([geodésica](https://doc.arcgis.com/pt-br/arcgis-online/analyze/geodesic-versus-planar-distance.htm#:~:text=A%20dist%C3%A2ncia%20geod%C3%A9sica%20%C3%A9%20calculada,da%20superf%C3%ADcie%20curva%20do%20mundo.)), "
         "como a superfície esférica da Terra. "
@@ -358,6 +403,7 @@ def plot_all_distances_bar(dataframe: pd.DataFrame):
     )
     
     fig.update_layout(height=400, width=650, showlegend=False, yaxis_title="km")
+    fig.update_xaxes(tickangle=-75)
 
     return fig
 
