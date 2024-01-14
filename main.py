@@ -148,6 +148,8 @@ def run(df: pd.DataFrame):
         f"- Cálculo das distâncias: https://geopy.readthedocs.io/en/stable/\n"
     )
 
+    st.markdown("Desenvolvido por: [Tiago Pereira](https://www.linkedin.com/in/tiago-pereira-demorais/)")
+
 def plot_states(data: pd.DataFrame):
     _c1 = set_df_scenario(data, "1")
     _c1 = _c1.loc[_c1['team'] != "Santos FC"]
@@ -458,6 +460,8 @@ def plot_top_distances_bar(dataframe: pd.DataFrame, near: bool):
 
 def plot_map(coordinates: dict):
 
+    santos_position = [i for i, info in enumerate(coordinates['infos']) if info.startswith("Santos")][0]
+
     fig = go.Figure()
 
     fig.update_layout(
@@ -481,6 +485,23 @@ def plot_map(coordinates: dict):
             ),
             showlegend=False
         ))
+
+        if i != santos_position:
+                fig.add_trace(go.Scattermapbox(
+                    mode='lines',
+                    lon=[coordinates["long"][santos_position], coord[1]],
+                    lat=[coordinates["lat"][santos_position], coord[0]],
+                    marker=dict(
+                        size=1
+                    ),
+                    line=dict(
+                        width=2,
+                        color="rgba(255,0,0, 0.1)"
+                    ),
+                    showlegend=False,
+                    text=coordinates['infos'][i],
+                    hoverinfo='text',
+                ))
 
     return fig
 
