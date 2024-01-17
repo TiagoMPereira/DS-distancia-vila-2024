@@ -486,23 +486,6 @@ def plot_map(coordinates: dict):
             showlegend=False
         ))
 
-        if i != santos_position:
-                fig.add_trace(go.Scattermapbox(
-                    mode='lines',
-                    lon=[coordinates["long"][santos_position], coord[1]],
-                    lat=[coordinates["lat"][santos_position], coord[0]],
-                    marker=dict(
-                        size=1
-                    ),
-                    line=dict(
-                        width=2,
-                        color="rgba(255,0,0, 0.1)"
-                    ),
-                    showlegend=False,
-                    text=coordinates['infos'][i],
-                    hoverinfo='text',
-                ))
-
     return fig
 
 def display_content(selected_scenario):
